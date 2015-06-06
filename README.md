@@ -6,9 +6,9 @@ TTX/FontToolsを利用したAppleカラーフォント作成のサンプル
 output/nxTokiACF.ttf　が作成されたフォントです。これはMac OS Xなどで開きインストールことができます。
 
 ## 必要なもの
-*TTX/FontTools　
-*Python
-*GNU Make
+- TTX/FontTools　
+- Python
+- GNU Make
 
 ## ビルド方法
 1. Makefile　を編集する。  
