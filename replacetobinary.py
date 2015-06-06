@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env python
 # coding: utf-8
 
-import sys, codecs, re, binascii
+import sys, codecs, re, binascii, os
 
 HEXREF = r'<hexdata\s+src="(.+)"\s*/>'
 
@@ -24,6 +24,10 @@ def replace(text):
         return text
 
 def main(source, dest):
+    destdir = os.path.dirname(dest)
+    if not os.path.isdir(destdir):
+        os.makedirs(destdir)
+    
     with codecs.open(source, 'r', 'utf-8') as r:
         with codecs.open(dest, 'w', 'utf-8') as w:
             line = r.readline()
